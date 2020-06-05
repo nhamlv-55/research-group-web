@@ -19,15 +19,15 @@ profx:
     image: /img/people/prof-x.png
     bio: Professor
 
-scott:
-    display_name: "Scott Summers"
+grad-hari:
+    display_name: "Hari Something"
     webpage: "http://en.wikipedia.org/wiki/Cyclops_(comics)"
     role: staff
     image: /img/people/scott.png
     bio: aka Cyclops
 
-wolverine:
-    display_name: "Wolverine"
+grad-kuba:
+    display_name: "Kuba Kuderski"
     webpage: "http://en.wikipedia.org/wiki/Wolverine_%28comics%29"
     github: wolverine
     role: postdoc

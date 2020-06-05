@@ -24,8 +24,13 @@ clean:
 	$(RM) -r _site _includes/pubs.html
 
 DEPLOY_HOST ?= yourwebpage.com
-DEPLOY_PATH ?= www/
+DEPLOY_PATH ?= ../aemari.github.io/
 RSYNC := rsync --compress --recursive --checksum --itemize-changes --delete -e ssh
 
-deploy: clean build
-	$(RSYNC) _site/ $(DEPLOY_HOST):$(DEPLOY_PATH)
+deploy: _includes/pubs.html
+	jekyll build
+	cp -r _site/* $(DEPLOY_PATH)
+	cd $(DEPLOY_PATH)
+	git add --all
+	git commit -m "update website"
+	git push
